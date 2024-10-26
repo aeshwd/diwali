@@ -1,0 +1,167 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f57c00;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin: 0 10px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .logo {
+    color: #fff;
+    font-size: 1.5em;
+  }
+  
+  /* Hero Section */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    background: url('diwali.jpeg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+    width: 90vw;
+    margin-top: 30px;
+  }
+  
+  .explore-btn {
+    background-color: #ff9d00;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  /* Sections */
+  section {
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  /* Diwali Light Animation */
+  @keyframes lightFlicker {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+  
+  @keyframes lightGlow {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  .diwali-lights {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  
+  .light {
+    width: 15px;
+    height: 15px;
+    margin: 0 10px;
+    background-color: gold;
+    border-radius: 50%;
+    animation: lightFlicker 1.5s infinite, lightGlow 2s infinite;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+    }
+  
+    .hero {
+      padding: 20px;
+      height: auto;
+    }
+  
+    .explore-btn {
+      padding: 8px 16px;
+      font-size: 0.9em;
+    }
+  
+    section {
+      padding: 40px 20px;
+    }
+  }
+  
+
+  /* About Gallery Styles */
+.about-gallery {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.gallery-img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Adjustment */
+@media screen and (max-width: 768px) {
+    .gallery-img {
+        max-width: 100px;
+    }
+}
+
+
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    gap: 30px;
+    flex-direction: column;
+}
