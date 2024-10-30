@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Happy Diwali</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="content">
+            <h1 id="greeting"></h1>
+            <p class="message">
+                You mean the world to me... <br>
+                So, this Diwali, I made something special for you.
+            </p>
+            <!-- Music Icon -->
+            <div class="music-section">
+                <audio id="audio" autoplay loop>
+                    <source src="festival-of-lights-india-diwali-celebration-indian-music-246606.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <button class="music-btn" onclick="toggleMusic()">
+                    <i id="music-icon" class="fas fa-music"></i> Play Diwali Tune
+                </button>
+            </div>
+        </div>
+    </div>
+
+        <!-- Diwali Section -->
+        <div class="diwali-section">
+            <h2>Happy Diwali!</h2>
+            <img src="diya.gif" alt="Diya" class="diya-image">
+            <p class="diwali-message">
+                Let's dive into sweets, light up the crackers, share the laughs and build memories 
+                that light up your hearts as much as the night sky. Let's celebrate!
+            </p>
+            <div class="button-group">
+                <button class="action-btn burst-btn" onclick="burstCracker()">Burst a Cracker!</button>
+             <a href="#blessings-section">  <button class="action-btn blessings-btn" onclick="getBlessings()">Get Blessings</button> </a> 
+            </div>
+        </div>
+
+
+        <!-- Blessings Section -->
+<div class="blessings-section" id="blessings-section">
+    <img src="ram.gif" alt="God" class="god-image"> <!-- Replace with actual image path -->
+    <div class="blessings-text">
+        <h2>Diwali Blessings</h2>
+        <p id="blessing-message"></p>
+    </div>
+</div>
+
+
+<!-- Diwali Greeting Section -->
+<div class="greeting-section" id="greeting-section">
+    <div class="sweets-top">
+        <img src="sweets.webp" alt="Sweets" class="sweet-image"> <!-- Replace with actual top sweet image path -->
+    </div>
+    <div class="sweets-bottom">
+        <img src="sweets.png" alt="Sweets" class="sweet-image"> <!-- Replace with actual bottom sweet image path -->
+    </div>
+    <div class="sweets-left">
+        <img src="sweets-1.webp" alt="Sweets" class="sweet-image"> <!-- Replace with actual left sweet image path -->
+    </div>
+    <div class="sweets-right">
+        <img src="sweets.png" alt="Sweets" class="sweet-image"> <!-- Replace with actual right sweet image path -->
+    </div>
+    <div class="greeting-content">
+        <h2>Happy Diwali, <span id="user-name"></span>!</h2>
+        <p>
+            May this Diwali bring joy, health, and prosperity to your life. 
+            As the festival of lights illuminates our lives, may it guide you and your family to peace and happiness.
+            Celebrate with sweets, laughter, and love. Let’s cherish these moments, create new memories, and look forward to the bright year ahead!
+        </p>
+        <p class="signature">- Greetings from Aesh Goswami</p>
+    </div>
+</div>
+
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-content">
+        <h2>Celebrate Diwali with Love and Light!</h2>
+        <p>Wishing you a prosperous Diwali filled with joy, health, and happiness.</p>
+        <div class="contact-info">
+            <p>Contact: <a href="aeshgoswamiwd@gmail.com">aeshgoswamiwd@gmail.com</a></p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Aesh Goswami. All rights reserved.</p>
+    </div>
+</footer>
+
+
+
+
+
+
+        
+    
+
+    <!-- Font Awesome for icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/fontawesome.min.js" integrity="sha512-NeFv3hB6XGV+0y96NVxoWIkhrs1eC3KXBJ9OJiTFktvbzJ/0Kk7Rmm9hJ2/c2wJjy6wG0a0lIgehHjCTDLRwWw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- JavaScript -->
+    <script>
+        // Prompt for Name
+        window.onload = function () {
+            const userName = prompt("What is your name?");
+            document.getElementById("greeting").innerText = `Hi, ${userName}!`;
+        }
+
+        // Toggle Music Play/Pause
+        const music = document.querySelector(".music-btn");
+        const audio = document.getElementById("audio");
+        function toggleMusic() {
+            if (audio.paused) {
+                audio.play();
+                document.getElementById("music-icon").classList.add("fa-pause");
+                document.getElementById("music-icon").classList.remove("fa-play");
+               
+
+            } else {
+                audio.pause();
+                document.getElementById("music-icon").classList.add("fa-play");
+                document.getElementById("music-icon").classList.remove("fa-pause");
+                 music.innerHTML = `Pause Music`
+            }
+        }
+    </script>
+</body>
+
+<script src="script.js"></script>
+</html>
